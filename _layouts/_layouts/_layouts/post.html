@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.excerpt | strip_html | escape }}">
+  <title>{{ page.title | escape }} | ODDLY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f8f6f0;
+      --ink: #24372e;
+      --muted: #77766e;
+      --accent: #a45d43;
+      --line: #e4e0d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.85;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 6%;
+    }
+    .brand {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .04em;
+    }
+    main {
+      width: min(760px, 88%);
+      margin: 65px auto 90px;
+    }
+    .back {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    .category {
+      margin-top: 44px;
+      color: var(--accent);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+    h1 {
+      margin: 15px 0 20px;
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      letter-spacing: -.035em;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: .88rem;
+      margin-bottom: 35px;
+    }
+    article {
+      font-size: 1.06rem;
+      overflow-wrap: anywhere;
+    }
+    article h2 {
+      margin-top: 2.4em;
+      font-size: 1.8rem;
+    }
+    article h3 {
+      margin-top: 2em;
+      font-size: 1.2rem;
+    }
+    article p { margin: 1.25em 0; }
+    article a { color: var(--accent); }
+    article img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 30px auto;
+      border-radius: 4px;
+    }
+    article blockquote {
+      margin: 2em 0;
+      padding: 8px 0 8px 22px;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.25rem;
+    }
+    .closing {
+      margin-top: 55px;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 6%;
+      color: var(--muted);
+      text-align: center;
+      font-size: .82rem;
+    }
+    footer a { color: var(--ink); }
+    @media (max-width: 600px) {
+      main { margin-top: 38px; }
+      article { font-size: 1rem; }
+      article h2 { font-size: 1.55rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">ODDLY
+      <span>Of People and Patterns</span>
+    </a>
+  </header>
+
+  <main>
+    <a class="back" href="/">&larr; Back to the journal</a>
+
+    <div class="category">
+      {{ page.categories | first | default: "Reflections" | replace: "-", " " }}
+    </div>
+
+    <h1>{{ page.title | escape }}</h1>
+
+    <div class="meta">
+      By ODDLY
+    </div>
+
+    <article>
+      {{ content }}
+    </article>
+
+    <div class="closing">
+      <a class="back" href="/">&larr; Explore more from ODDLY</a>
+    </div>
+  </main>
+
+  <footer>
+    ODDLY · Of People and Patterns
+  </footer>
+</body>
+</html>
