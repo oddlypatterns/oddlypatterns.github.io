@@ -1,10 +1,12 @@
 
+
 ---
 layout: post
 title: "Grief Is Not the Problem: Why Healing Begins When We Face Loss"
 categories:
-  - Psychology & Relationships
+  - "Psychology & Relationships"
 ---
+
 
 We live in a world that teaches us how to keep going, but rarely teaches us what to do when something inside us breaks.
 
