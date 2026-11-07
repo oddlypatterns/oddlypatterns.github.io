@@ -1,0 +1,6 @@
+title: ODDLY
+description: Of People and Patterns
+url: "https://oddlypatterns.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /articles/:title/
