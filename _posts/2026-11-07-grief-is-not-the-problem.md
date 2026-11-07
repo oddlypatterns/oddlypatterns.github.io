@@ -4,7 +4,6 @@ title: "Grief Is Not the Problem: Why Healing Begins When We Face Loss"
 categories:
   - Psychology & Relationships
 ---
-
 We live in a world that teaches us how to keep going, but rarely teaches us what to do when something inside us breaks.
 
 When a relationship ends, we are told to move on. When someone dies, we are expected to return to our routines. When a dream falls apart, we are encouraged to find another one.
