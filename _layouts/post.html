@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | ODDLY</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | escape }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f8f6f0;
+      color: #292d27;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.85;
+    }
+    header {
+      padding: 24px;
+      border-bottom: 1px solid #e4e0d5;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: auto;
+    }
+    header a, .back-link {
+      color: #315443;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    main {
+      max-width: 760px;
+      margin: 65px auto 90px;
+      padding: 0 24px;
+    }
+    .category {
+      color: #a35f43;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(36px, 6vw, 54px);
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -1px;
+      margin: 18px 0 24px;
+    }
+    .article-body {
+      font-size: 17px;
+    }
+    .article-body h2, .article-body h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-top: 42px;
+    }
+    .article-body img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 32px auto;
+      border-radius: 4px;
+    }
+    .article-body a {
+      color: #315443;
+    }
+    .article-body blockquote {
+      border-left: 3px solid #a35f43;
+      margin: 30px 0;
+      padding: 4px 0 4px 22px;
+      color: #5b6258;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 21px;
+    }
+    footer {
+      border-top: 1px solid #e4e0d5;
+      padding: 28px 24px;
+      text-align: center;
+      color: #77796f;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      main { margin-top: 40px; }
+      .article-body { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/">ODDLY</a>
+      <span> · Of People and Patterns</span>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="/">← Back to homepage</a>
+    <p class="category">
+      {% if page.categories.size > 0 %}
+        {{ page.categories | join: " · " }}
+      {% else %}
+        ODDLY Journal
+      {% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    <article class="article-body">
+      {{ content }}
+    </article>
+    <p style="margin-top: 55px;">
+      <a class="back-link" href="/">← Explore more from ODDLY</a>
+    </p>
+  </main>
+
+  <footer>ODDLY · Of People and Patterns</footer>
+</body>
+</html>
